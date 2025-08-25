@@ -1,0 +1,70 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Press Start 2P", Arial, Helvetica, sans-serif;
+    overflow: hidden;
+    cursor: url("kursor.png"), auto;
+    background-color: darkslateblue;
+}
+
+.pocetna-div{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+#laptop-slika{
+    object-fit: cover; /*   zadrzava ratio */
+    height: 100%;
+    width: 100%;
+}
+
+.pocetna-tekst{
+    position: absolute;  /* u odnosu na pocetna-div*/
+    top: 48%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    color: white;
+    line-height: 2rem;
+    font-size: 1rem;
+}
+
+.pocetna-tekst:active{
+    cursor: url("kursorklik.png"), auto;
+}
+
+.pocetna-tekst:hover{
+    color: rgb(250, 210, 216);
+}
+
+/* neon tekst, izvor: https://www.w3schools.com/howto/howto_css_glowing_text.asp*/
+.neon {
+  color: white;
+  text-align: center;
+  animation: neon 1s ease-in-out infinite alternate;
+}
+
+@keyframes neon {
+  from {
+    text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4, 0 0 30px #ff33aa, 0 0 40px #ff00cc, 0 0 50px #cc00ff, 0 0 60px #b300e6, 0 0 70px #9900cc, 0 0 80px #8000b3, 0 0 90px #660099, 0 0 100px #4d0080;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #ff69b4, 0 0 30px #ff33aa, 0 0 40px #ff00cc, 0 0 50px #cc00ff, 0 0 60px #b300e6, 0 0 70px #9900cc, 0 0 80px #8000b3, 0 0 90px #660099, 0 0 100px #4d0080, 0 0 110px #330066;
+  }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(3.5);
+        opacity: 0;
+    }
+}
+
+.zoomIn {
+    animation: zoomIn 1.5s ease-in-out forwards;
+}

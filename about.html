@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Project</title>
+  <link rel="stylesheet" href="about.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Monoton&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <audio id="klikZvuk" src="zvukovi/klik2.mp3" preload="auto"></audio>
+  <img src="img/pozadina-nova3.png" alt="Background" class="pozadina-about">
+
+  <div class="about-wrap">
+    <header class="about-header">
+      <div class="naslov">
+        <h1>About Project</h1>
+        <p>Whack-a-Mole - PMF edition</p>
+      </div>
+      <div class="akcije">
+        <a href="menu.html" id="back-menu" class="dugme"><i class="fa-solid fa-angles-left"></i> Menu</a>
+        <a href="game.html" id="go-game" class="dugme dugme-game">New Game <i class="fa-solid fa-angles-right"></i></a>
+      </div>
+    </header>
+
+
+    <main class="about-layout">
+      <section class="kartica hero">
+        <h2><i class="fa-solid fa-code"></i> Project</h2>
+        <p><strong>Title:</strong> Whack-a-Mole - PMF edition (Project 2)</p>
+        <p><strong>Type:</strong> Web Programming (HTML/CSS/JS)</p>
+        <p><strong>Year:</strong> 2024/2025</p>
+        <div class="tagovi">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+        </div>
+      </section>
+
+      
+      <section class="kartica">
+        <h2><i class="fa-solid fa-university"></i> Faculty</h2>
+        <p><strong>Faculty:</strong> Faculty of Science</p>
+        <p><strong>University:</strong> University of Sarajevo</p>
+        <p><strong>City:</strong> Sarajevo</p>
+      </section>
+
+      <section class="kartica">
+        <h2><i class="fa-solid fa-user"></i> Author</h2>
+        <p><strong>Name:</strong> Asja Osmić</p>
+        <p><strong>Contact:</strong> 
+          <a class="link-mail" href="mailto:asja.osmic@gmail.com"><i class="fa-solid fa-envelope"></i> asja.osmic@gmail.com</a>
+        </p>
+      </section>
+
+      <section class="kartica course">
+        <h2><i class="fa-solid fa-chalkboard-user"></i> Course</h2>
+        <p><strong>Course:</strong> Web Programming</p>
+        <p><strong>Professor:</strong> Sead Delalić, PhD</p>
+        <p><strong>Assistant:</strong> Iman Bekkaye, MSc</p>
+        <p><strong>Study:</strong> Computer Science</p>
+      </section>
+    </main>
+
+
+    <section class="kartica extras">
+      <h2><i class="fa-solid fa-stars"></i> Extra features</h2>
+      <ul>
+        <li><strong>High score</strong> saved and displayed on menu page.</li>
+        <li><strong>Options popup</strong> (Sound ON/OFF, Music ON/OFF).</li>
+        <li><strong>Score pop-up animation</strong></li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>

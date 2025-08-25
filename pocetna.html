@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Home Page</title>
+    <link rel="stylesheet" href="pocetna.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<audio id="klikZvuk" src="zvukovi/klik.mp3" preload="auto"></audio>
+<body>
+    <div class="pocetna-div" id="pocetna-div">
+        <img src="img/laptop7.png" id="laptop-slika" alt="Slika laptopa">
+        <h3 class="pocetna-tekst neon" id="tekst" onclick="zapocniIgru()">Click to play!</h3>
+    </div>
+
+    <script>
+        const klikZvuk = document.getElementById("klikZvuk");
+        function playKlik() {
+            klikZvuk.currentTime = 0;
+            klikZvuk.play();
+        }
+
+        document.getElementById("tekst").addEventListener("click", ()=>{
+            playKlik();
+        })
+
+        function zapocniIgru() {
+            const container=document.getElementById("pocetna-div");
+            container.classList.add("zoomIn");
+            setTimeout(()=>{
+                window.location.href="menu.html"   /* https://www.w3schools.com/howto/howto_js_redirect_webpage.asp*/
+            },1500) /*iste duzine kao zoom in */
+        }
+    </script>
+</body>
+</html>

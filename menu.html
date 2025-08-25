@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Menu</title>
+    <link rel="stylesheet" href="menu.css">
+
+    <!-- Za ikonice koristen Font Awesome: https://fontawesome.com/ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Monoton&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <audio id="klikZvuk" src="zvukovi/klik2.mp3" preload="auto"></audio>
+  <audio id="pozadina-muzika" src="zvukovi/pozadinaMuzika.mp3" preload="auto" autoplay loop></audio>
+
+  <img src="img/pozadina-nova3.png" alt="Background" class="pozadina-menu">
+  <div class="sadrzaj-menu">
+    <h1 class="naslov-menu">WHACK-A-MOLE 
+    <!-- <img src="img/hammer.png" width="60" height="60"> -->
+    </h1>
+    <p id="pmf-edition">PMF edition <i class="fas fa-graduation-cap"></i></p>
+
+    <p id="highscore-prikaz">High score: </p>
+
+    <div class="dugmad">
+        <a href="instructions.html" id="instructions">Instructions</a>
+        <a href="game.html" id="new-game">New Game</a>
+        <a href="about.html" id="about">About project</a>
+    </div>
+  </div>
+
+
+  <script>
+
+    const klikZvuk = document.getElementById("klikZvuk");
+    klikZvuk.volume=1;
+
+    const game = document.getElementById("new-game");
+    const instructions = document.getElementById("instructions");
+    const about = document.getElementById("about");
+
+    const muzika = document.getElementById("pozadina-muzika");
+    muzika.volume=0.4;
+
+    game.addEventListener("click", function(e) {
+      e.preventDefault();
+      klikZvuk.play();
+
+      let fade = setInterval(() => {
+        if (muzika.volume > 0.05) {
+          muzika.volume -= 0.05;
+        } else {
+          muzika.volume = 0;
+          clearInterval(fade);
+        }
+      }, 50);
+     
+      setTimeout(()=>{
+        window.location.href = game.href;
+      }, 800)
+    })
+
+    about.addEventListener("click", function(e) {
+      e.preventDefault();
+      klikZvuk.play();
+      setTimeout(()=>{
+        window.location.href = about.href;
+      }, 800)
+    })
+
+    instructions.addEventListener("click", function(e) {
+      e.preventDefault();
+      klikZvuk.play();
+      setTimeout(()=>{
+        window.location.href = instructions.href;
+      }, 800)
+    })
+
+
+    /* chatgpt - localStorage() */
+
+    const HS_KEY="highscore";
+
+    const highscorePrikaz = document.getElementById("highscore-prikaz");
+
+    const noviHS = localStorage.getItem(HS_KEY);
+
+    if(noviHS === null){
+      highscorePrikaz.textContent+="0";
+    }
+    else{
+      highscorePrikaz.textContent+=noviHS
+
+    }
+
+    highscorePrikaz.addEventListener("click", ()=>{
+      muzika.play();
+    })
+
+  </script>
+</body>
+</html>

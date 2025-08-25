@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Whack-a-mole</title>
+    <link rel="stylesheet" href="game.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Monoton&display=swap" rel="stylesheet">
+</head>
+<audio id="dobarZvuk" src="zvukovi/dobarZvuk.mp3" preload="auto"></audio>
+<audio id="losZvuk"  src="zvukovi/losZvuk.mp3"  preload="auto"></audio>
+<audio id="klikZvuk" src="zvukovi/klik2.mp3" preload="auto"></audio>
+<audio id="bonusZvuk" src="zvukovi/bonus.mp3" preload="auto"></audio>
+<audio id="igra-muzika" src="zvukovi/igraMuzika.mp3" preload="auto" loop></audio>
+<audio id="game-over-zvuk" src="zvukovi/gameOver.mp3" preload="auto"></audio>
+
+<body>
+  <img src="img/pozadina-nova3.png" alt="Background" class="pozadina-game">
+  <div class="sadrzaj-igra">
+    <header>
+      <h4 id="naslov" class="neon">Whack-a-mole</h4>
+      <button type="button" id="startDugme" onclick="zapocniIgru()">START</button>
+      <i id="menuIkona" class="fa-solid fa-bars menuIkona"></i>
+    </header>
+    <div class="timer-bodovi">
+        <p id="timer">Timer: 30s</p>
+        <p id="bodovi">Score: 0</p>
+    </div>
+
+    <div class="srednji-dio">
+      <div class="upute">
+        <div>
+          <img src="img/zavrsni.png" alt="Graduation" width="50" height="50">
+          <p>+20 pts</p>
+        </div>
+        <div>
+          <img src="img/projekat.png" alt="Project" width="50" height="50">
+          <p>+10 pts</p>
+        </div>
+        <div>
+          <img src="img/test.png" alt="Test" width="50" height="50">
+          <p>+5 pts</p>
+        </div>
+        <div>
+          <img src="img/bonus1.png" alt="Bonus 1" width="50" height="50">
+          <p>+50 pts</p>
+        </div>
+
+        <div>
+          <img src="img/bonus2.png" alt="Bonus 2" width="50" height="50">
+          <p>+5 sec</p>
+        </div>
+        <div>
+          <img src="img/pad1.png" alt="Fail 1" width="50" height="50">
+          <p>-30 pts</p>
+        </div>
+        <div>
+          <img src="img/pad2.png" alt="Fail 2" width="50" height="50">
+          <p>RESET</p>
+        </div>
+      </div>
+
+      <div class="mreza" id="mreza">
+      </div>
+      
+      <div id="bodovi-animacija" class="bodovi-animacija">Click start to play!</div>
+    </div>
+
+    
+    <div class="donji-dio">
+      Choose the grid size:
+      <button id="dugme4" onclick="napraviGrid(4)">4x4</button>
+      <button id="dugme5" onclick="napraviGrid(5)">5x5</button>
+      <button id="dugme6" onclick="napraviGrid(6)">6x6</button>
+    </div>
+  </div>
+
+  <div id="overlay">
+    <div class="popup-box">
+      <div class="red">
+        <h3>Options</h3>
+        <button class="dugme" id="popupX" onclick="popupZatvori()">x</button>
+      </div>
+      <div class="red">
+        <a href="menu.html" class="dugme" id="linkMenu">Back to Menu</a>
+      </div>
+      <div class="red">
+        <button class="dugme" id="soundToggle">Sound: ON</button>
+        <button class="dugme" id="musicToggle">Music: ON</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

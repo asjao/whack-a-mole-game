@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Instructions</title>
+    <link rel="stylesheet" href="instructions.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Monoton&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <audio id="klikZvuk" src="zvukovi/klik2.mp3" preload="auto"></audio>
+  <img src="img/pozadina-nova3.png" alt="Background" class="pozadina-menu">
+
+  <div class="sadrzaj-upute">
+    <header>
+        <h1 class="naslov neon">Instructions</h1>
+        <p class="podnaslov">Whack-a-Mole - PMF edition</p>
+    </header>
+
+    <div class="instrukcije-grid">
+
+        <section class="box">
+            <h2><i class="fa-solid fa-circle-info"></i> Game goal</h2>
+            <p>
+                Collect as many points as possible in<strong> 30 seconds</strong>.
+                Click on "exam" and bonus icons that pop up in the grid.
+                Watch out for the negative ones!
+            </p>
+        </section>
+
+        <section class="box">
+            <h2><i class="fa-solid fa-list-check"></i> Scoring</h2>
+            <div class="legenda">
+                <div>
+                    <img src="img/zavrsni.png" alt="+20" width="56" height="56">
+                    <span>Final exam: +20pts</span>
+                </div>
+                <div>
+                    <img src="img/projekat.png" alt="+10" width="56" height="56">
+                    <span>Project: +10pts</span>
+                </div>
+                <div>
+                    <img src="img/test.png" alt="+5" width="56" height="56">
+                    <span>Test: +5pts</span>
+                </div>
+                <div>
+                    <img src="img/bonus1.png" alt="+50" width="56" height="56">
+                    <span>Bonus: +50pts</span>
+                </div>
+                <div>
+                    <img src="img/bonus2.png" alt="+5s" width="56" height="56">
+                    <span>Bonus: +5s</span>
+                </div>
+                <div>
+                    <img src="img/pad1.png" alt="-30" width="56" height="56">
+                    <span>Bug: -30pts</span>
+                </div>
+                <div>
+                    <img src="img/pad2.png" alt="RESET" width="56" height="56">
+                    <span>Reset! Watch out!</span>
+                </div>
+            </div>
+            <p class="napomena">
+                Each icon stays briefly on the screen (0.5-1.5s). Bonuses can appear <strong>2 times</strong> at most, each.
+            </p>
+        </section>
+
+        <section class="box">
+            <h2><i class="fa-solid fa-gamepad"></i> How to play</h2>
+            <ul class="lista">
+                <li>Choose the grid size: <strong>4x4</strong>, <strong>5x5</strong> or <strong>6x6</strong>.</li>
+                <li>Press <strong>START</strong> - the timer begins at 30s.</li>
+                <li>Click the positive icons (exams and bonuses), avoid negative ones.</li>
+                <li>Score and timer update live.</li>
+                <li>The game has sounds for hits, mistakes and bonuses.</li>
+            </ul>
+        </section>
+
+        <section class="box">
+        <h2><i class="fa-solid fa-lightbulb"></i> Advice</h2>
+        <ul class="lista">
+            <li>Don't click blindly - "bad" icons remove points or reset the score.</li>
+            <li>The bonuses are rare - try to grab them.</li>
+            <li>Bigger grids have more targets but are harder to track.</li>
+        </ul>
+        </section>
+    </div>
+
+    <div class="dugmad">
+        <a href="menu.html" id="back-menu" class="btn"><i class="fa-solid fa-angles-left"></i> Menu</a>
+        <a href="game.html" id="go-game" class="btn primary">New Game <i class="fa-solid fa-angles-right"></i></a>
+    </div>
+  </div>
+
+
+
+  <script>
+    const klikZvuk = document.getElementById("klikZvuk");
+    function playKlik() {
+        klikZvuk.currentTime = 0;
+        klikZvuk.play();
+    }
+   
+  </script>
+</body>
+</html>

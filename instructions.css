@@ -1,0 +1,178 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(23, 17, 62);
+    min-height: 100vh;
+    max-width: 100vw;
+    overflow-x: hidden;
+    animation: fadeIn 1s ease-in forwards;
+    font-family: "Audiowide", Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+* { 
+    box-sizing: border-box; 
+}
+
+@keyframes fadeIn { 
+    from {
+        opacity: 0;
+    } 
+    to {
+        opacity: 1;
+    } 
+}
+
+.pozadina-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+    z-index: -1;
+}
+
+
+.sadrzaj-upute{
+    width: min(100%, 900px);
+    margin: 32px auto;
+    padding: 12px;
+}
+
+.naslov {
+    font-family: "Monoton", cursive;
+    margin: 0;
+}
+
+.podnaslov {
+    margin: 6px 0 0 0;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.neon {
+    animation: neon 0.5s ease-in infinite alternate;
+}
+
+
+@keyframes neon {
+  from {
+    text-shadow: 0 0 4px #ff4da6, 0 0 8px #ff4da6, 0 0 12px #ff4da6, 0 0 20px #ff1a75;
+    color: #fff;
+  }
+  to {
+    text-shadow: 0 0 6px #ff4da6, 0 0 12px #ff4da6, 0 0 18px #ff4da6, 0 0 30px #ff1a75;
+    color: #ffe6f0;
+  }
+}
+
+
+.box{
+    background: rgba(148, 115, 180, 0.65);
+    border: 2px solid rgba(141, 41, 91, 0.6);
+    border-radius: 14px;
+    padding: 14px;
+    margin: 12px 0;
+    box-shadow: 2px 2px 6px rgba(255,255,255,0.2);
+}
+
+.box h2{
+    margin: 0 0 8px 0;
+    font-size: 1.2rem;
+}
+
+
+.lista{
+    margin: 6px 0 0 18px;
+    padding: 0;
+}
+.lista li{ 
+    margin: 6px 0; 
+
+}
+
+
+.legenda{
+    margin-top: 8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+.legenda div{
+    background: rgba(255,255,255,0.12);
+    border-radius: 10px;
+    padding: 8px;
+    text-align: center;
+}
+.legenda img{ 
+    display:block; 
+    margin: 0 auto 6px auto; 
+}
+.legenda span{ 
+    font-weight: bold; 
+}
+
+
+
+
+.napomena{ 
+    margin-top: 8px; 
+    font-size: 0.95rem; }
+
+
+
+.dugmad{
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 14px;
+}
+
+
+.btn{
+    text-decoration: none;
+    color: white;
+    background: #dc3086f1;
+    border: 3px solid rgba(141, 41, 91, 0.7);
+    padding: 10px 16px;
+    border-radius: 999px;
+    box-shadow: 2px 2px 6px rgba(255,255,255,0.3);
+    transition: transform 0.12s ease
+}
+
+
+.btn:hover{
+    transform: translateY(-2px);
+    background: rgba(213, 64, 138, 0.85);
+    cursor: url("kursor.png") 16 16, auto;
+}
+
+.btn:active{
+    cursor: url("kursorklik.png") 16 16, auto !important;
+}
+
+.btn.primary{
+    background: #4a4cea;
+    border-color: rgba(60, 60, 200, 0.7);
+}
+
+
+@media (max-width: 720px){
+    .legenda{ 
+        grid-template-columns: 1fr 1fr 1fr; 
+    }
+}
+
+@media (max-width: 460px){
+     .legenda{ 
+        grid-template-columns:2fr 2fr; 
+    }
+}
