@@ -4,6 +4,16 @@ An interactive browser-based Whack-a-Mole game built with **HTML, CSS, and JavaS
 
 The game was developed as an individual university project for the **Web Programming** course at the **University of Sarajevo – Faculty of Science**.
 
+## Screenshots
+
+| Landing Page | Main Menu |
+|---|---|
+| <img src="screenshots/landing-page.png" width="600"> | <img src="screenshots/main-menu.png" width="600"> |
+
+### Gameplay
+
+<img src="screenshots/gameplay.png" width="700">
+
 ## Project Overview
 
 The game is themed around student life and university exams.
@@ -67,10 +77,6 @@ No installation is required.
 1. Clone or download the repository.
 2. Open `pocetna.html` in a web browser.
 3. Click **"Click to play!"** to enter the game menu and start playing.
-
-## Screenshots
-
-Screenshots of the game interface can be added here.
 
 ## About
 
